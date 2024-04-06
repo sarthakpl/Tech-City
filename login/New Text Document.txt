@@ -1,0 +1,9 @@
+$con=mysqli_connect('localhost','root','','log');
+if(isset($_POST['lo']))
+{
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+  $query="INSERT INTO login(email,password) VALUES ('$email','$password')";
+  $run=mysqli_query($con,$query);
+
+}
